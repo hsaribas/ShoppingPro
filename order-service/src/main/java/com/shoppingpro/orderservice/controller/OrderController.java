@@ -19,6 +19,4 @@ public class OrderController {
         orderService.placeOrder(orderRequest);
         return "Order placed successfully";
     }
-
-    
 }

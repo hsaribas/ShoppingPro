@@ -1,5 +1,6 @@
-package com.shoppingpro.orderservice.dto;
+package com.shoppingpro.orderservice.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,13 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderLineItemsDto {
 
+@Table(name = "t_order_line_item")
+@Entity
+public class OrderLineItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String skuCode;
